@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node, assetManager, AudioClip, game, AudioSource } from 'cc';
-import ASCAd from './ADSDK/ASCAd';
+// import ASCAd from './ADSDK/ASCAd';
 const { ccclass, property } = _decorator;
 
 @ccclass('AudioEffectCtrl')
@@ -59,9 +59,9 @@ export class AudioEffectCtrl extends Component {
     }
 
     phoneVibrate() {
-        if(this.isPhoneVibrate) {
-            ASCAd.getInstance().phoneVibrate("short");
-        }
+        // if(this.isPhoneVibrate) {
+        //     ASCAd.getInstance().phoneVibrate("short");
+        // }
     }
 
 }

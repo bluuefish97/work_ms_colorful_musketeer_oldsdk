@@ -10,14 +10,15 @@ import { Facade } from "../../../Plugin/core/puremvc/patterns/facade/Facade";
 import { MediatorDefine } from "../mediatorDefine";
 import { ModelToggleGroupMed } from "../Mediator/ModelToggleGroupMed";
 import { CommandDefine } from "../commandDefine";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+// import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 import { ProxyDefine } from "../proxyDefine";
 import { GameMusicPxy } from "../Proxy/gameMusicPxy";
 import { GameUserPxy } from "../Proxy/gameUserPxy";
 import { AudioEffectCtrl } from "../../../Plugin/AudioEffectCtrl";
 import AudioManager from "../../../Plugin/audioPlayer/AudioManager";
 import { AppPlatformController, App_Platform } from "../../../Plugin/AppPlatformController";
-import { sdkConfig } from "../../../Plugin/ADSDK/SdkConfig";
+// import { sdkConfig } from "../../../Plugin/ADSDK/SdkConfig";
+import ASCAd_New from "../../../Plugin/ASCAd_New";
 
 export class AppStartCmd extends SimpleCommand {
 
@@ -49,12 +50,14 @@ export class AppStartCmd extends SimpleCommand {
             if(userPxy.getUserInfo()) {
                 call();
             } else {
-                ASCAd.getInstance().showPrivacyAgreement("", "", (suc: any) => {
-                    if(suc) {
-                        userPxy.setUserInfo();
-                        call();
-                    }
-                })
+                // ASCAd.getInstance().showPrivacyAgreement("", "", (suc: any) => {
+                //     if(suc) {
+                //         userPxy.setUserInfo();
+                //         call();
+                //     }
+                // })
+                userPxy.setUserInfo();
+                call();
             }
         }
     }
@@ -122,25 +125,26 @@ export class AppStartCmd extends SimpleCommand {
     private fitChannelId() {
         switch (AppPlatformController.Platform) {
             case App_Platform.GP_Vivo:
-                sdkConfig.channelId = '5645108'
+              //  sdkConfig.channelId = '5645108'
                 break;
             case App_Platform.GP_Oppo:
-                sdkConfig.channelId = '5645142'
+              //  sdkConfig.channelId = '5645142'
                 break;
             case App_Platform.GP_Tiktok:
-                sdkConfig.channelId = '5645154'
+               // sdkConfig.channelId = '5645154'
                 break;
             case App_Platform.GP_Android:
-                sdkConfig.channelId = '1234666';
+               // sdkConfig.channelId = '1234666';
                 break;
             case App_Platform.GP_WX:
-                sdkConfig.channelId = '5777161'
+               ASCAd_New.getInstance().setChannelId(ApplicationManager.getInstance().channelId);
                 break;
             default:
-                sdkConfig.channelId = '0'
+                ASCAd_New.getInstance().setChannelId(0);
+               // sdkConfig.channelId = '0'
                 break;
         }
-        ASCAd.getInstance().initAd();
-        ASCAd.getInstance().setGroup(25)
+        ASCAd_New.getInstance().initAd();
+      //  ASCAd.getInstance().setGroup(25)
     }
 }

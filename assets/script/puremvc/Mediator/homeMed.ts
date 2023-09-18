@@ -3,7 +3,7 @@ import { INotification } from "../../../Plugin/core/puremvc/interfaces/INotifica
 import { HomePanel } from "../../panels/homePanel";
 import { CommandDefine } from "../commandDefine";
 import { PanelType } from "../../../Plugin/UIFrameWork/PanelType";
-import { log, Node, find, ScrollView, view, UITransform, PageView, Toggle, SpriteFrame } from "cc";
+import { log, Node, find, ScrollView, view, UITransform, PageView, Toggle, SpriteFrame, warn } from "cc";
 import UIPanelController from "../../../Plugin/UIFrameWork/UIPanelControllor";
 import { PlaySongInfo, SongTableType, SongPlayType, FMRSwitchRequestInfo, SwitchType, FuncModule } from "../../GloalDefine";
 import SongListManager from "../../tools/SongListManager";
@@ -34,10 +34,12 @@ export class HomeMed extends Mediator {
             this.sendNotification(CommandDefine.PushPanelReqiest, PanelType.Set);
         });
         this.panel.onEnterCall = () => {
+            warn("HomeMed   onEnterCall");
             this.sendNotification(CommandDefine.FMRSwitchRequest, new FMRSwitchRequestInfo(SwitchType.OPEN, FuncModule.HomeModule));
             ReportAnalytics.getInstance().reportAnalytics("viewShow_eventAnalytics", "main", 1)
         }
         this.panel.onExitCall = () => {
+            warn("HomeMed   onExitCall");
             this.panel = null;
             this.curContentY = 0;
             this.lastContentY = 0;

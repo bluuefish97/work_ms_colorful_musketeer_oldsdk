@@ -8,8 +8,9 @@ import UIPanelController from "../../../Plugin/UIFrameWork/UIPanelControllor";
 import { GameDirector } from "../../game/gameDirector";
 import { SwitchType } from "../../GloalDefine";
 import { AudioEffectCtrl, ClipEffectType } from "../../../Plugin/AudioEffectCtrl";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+//import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 import { MsghintManager } from "../../tools/msghintManager";
+import ASCAd_New from "../../../Plugin/ASCAd_New";
 
 export class ReviveMed extends Mediator {
 
@@ -20,9 +21,9 @@ export class ReviveMed extends Mediator {
 
     private bindListener(): void {
         this._panel.onEnterCall = () => {
-            if(ASCAd.getInstance().getIntersFlag()) {
+            if(ASCAd_New.getInstance().getIntersFlag()) {
                 this._panel.isStop = true;
-                ASCAd.getInstance().showInters(() => {
+                ASCAd_New.getInstance().showInters(() => {
                     this._panel.isStop = false;
                 })
             }
@@ -33,8 +34,8 @@ export class ReviveMed extends Mediator {
         this._panel.registerAdReviveBtnClickEvent(() => {
             this._panel.isStop = true;
             AudioEffectCtrl.getInstance().playEffect(ClipEffectType.normalBtnClip);
-            if (ASCAd.getInstance().getVideoFlag()) {
-                ASCAd.getInstance().showVideo((isSucces: any) => {
+            if (ASCAd_New.getInstance().getVideoFlag()) {
+                ASCAd_New.getInstance().showVideo((isSucces: any) => {
                     this._panel.isStop = false;
                     if (isSucces) {
                         GameDirector.getInstance().gameRevive();

@@ -7,9 +7,10 @@ import { CommandDefine } from '../commandDefine';
 import { PanelType } from '../../../Plugin/UIFrameWork/PanelType';
 import { INotification } from '../../../Plugin/core/puremvc/interfaces/INotification';
 import { AudioEffectCtrl, ClipEffectType } from '../../../Plugin/AudioEffectCtrl';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
 import { ApplicationManager } from '../../applicationManager';
 import { App_Platform } from '../../../Plugin/AppPlatformController';
+import ASCAd_New from '../../../Plugin/ASCAd_New';
 const { ccclass, property } = _decorator;
 @ccclass('ModelToggleGroupMed')
 export class ModelToggleGroupMed extends Mediator {
@@ -96,8 +97,8 @@ export class ModelToggleGroupMed extends Mediator {
         this.curFuncModule = _funcModule;
         let panelType;
         //微信
-        if(ASCAd.getInstance().getIntersFlag()) {
-            ASCAd.getInstance().showInters();
+        if(ASCAd_New.getInstance().getIntersFlag()) {
+            ASCAd_New.getInstance().showInters(()=>{});
         }
         // if(ApplicationManager.getInstance().Platform == App_Platform.GP_WX) {
         //     if(_funcModule == FuncModule.HomeModule) {
@@ -109,8 +110,8 @@ export class ModelToggleGroupMed extends Mediator {
         //         ASCAd.getInstance().hideNavigateIcon();
         //     }
         // }
-        ASCAd.getInstance().hideBanner();
-        ASCAd.getInstance().hideNativeImage();
+        ASCAd_New.getInstance().hideBanner();
+        // ASCAd_New.getInstance().hideNativeImage();
         switch (_funcModule) {
             case FuncModule.SkinModule:
                 panelType = PanelType.Skin;

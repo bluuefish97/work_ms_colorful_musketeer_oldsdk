@@ -10,7 +10,7 @@ import { MsghintManager } from '../../tools/msghintManager';
 import UIPanelController from '../../../Plugin/UIFrameWork/UIPanelControllor';
 import { CommandDefine } from '../commandDefine';
 import { ConsumablesAlterInfo, ConsumablesType } from '../../GloalDefine';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
 import { PanelType } from '../../../Plugin/UIFrameWork/PanelType';
 
 export class ShareRecCmd extends SimpleCommand {
@@ -30,24 +30,24 @@ export class ShareRecCmd extends SimpleCommand {
                 //首页录屏的分享
             }
 
-            ASCAd.getInstance().shareVideo("", "", '#益欣小游戏#抖音小游戏#节奏#炫彩枪神#' + name, RecController.getInstance().recPath, function (success: boolean) {
-                if (success) {
-                    console.log("分享视频成功");
-                    MsghintManager.getInstance().mainMsgHint("分享视频成功");
-                    if (UIPanelController.getInstance().checkIsTopView(PanelType.ShareRec)) {
-                        UIPanelController.getInstance().popView();
-                    }
-                    self.sendNotification(CommandDefine.Consumables,
-                        {
-                            info: new ConsumablesAlterInfo(ConsumablesType.dia, 100),
-                            callback: null
-                        });
-                }
-                else {
-                    console.log("分享视频失败")
-                }
+            // ASCAd.getInstance().shareVideo("", "", '#益欣小游戏#抖音小游戏#节奏#炫彩枪神#' + name, RecController.getInstance().recPath, function (success: boolean) {
+            //     if (success) {
+            //         console.log("分享视频成功");
+            //         MsghintManager.getInstance().mainMsgHint("分享视频成功");
+            //         if (UIPanelController.getInstance().checkIsTopView(PanelType.ShareRec)) {
+            //             UIPanelController.getInstance().popView();
+            //         }
+            //         self.sendNotification(CommandDefine.Consumables,
+            //             {
+            //                 info: new ConsumablesAlterInfo(ConsumablesType.dia, 100),
+            //                 callback: null
+            //             });
+            //     }
+            //     else {
+            //         console.log("分享视频失败")
+            //     }
 
-            });
+            // });
         }
         else {
             if (ApplicationManager.getInstance().develop) {

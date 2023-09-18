@@ -32,7 +32,6 @@ export default class GloalDefine {
     static readonly PATH_GameConfig: string = "configs";
     
     static readonly MusicTableUrl = "https://musicgame.xplaymobile.com/MusicGames/Gamelist/TikTok/xuancaiqianshen.json"
-    static readonly MusicTableCNUrl = "https://musicgame.xplaymobile.com/MusicGames/Gamelist/TikTok/xuancaiqianshen_cn.json"
 }
 
 export class LocalKeys {

@@ -3,11 +3,12 @@ import { INotification } from "../../../Plugin/core/puremvc/interfaces/INotifica
 import { ConsumablesAlterInfo, ConsumablesType, SongInfo } from "../../GloalDefine";
 import { Facade } from "../../../Plugin/core/puremvc/patterns/facade/Facade";
 import { ProxyDefine } from "../proxyDefine";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+// import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 import { CommandDefine } from "../commandDefine";
 import { GameMusicPxy } from "../Proxy/gameMusicPxy";
 import { MsghintManager } from "../../tools/msghintManager";
 import AudioManager from "../../../Plugin/audioPlayer/AudioManager";
+import ASCAd_New from "../../../Plugin/ASCAd_New";
 
 export class UnlockSongCmd extends SimpleCommand {
     public execute(notification: INotification): void {
@@ -18,9 +19,9 @@ export class UnlockSongCmd extends SimpleCommand {
         let game_MusicPxy = Facade.getInstance().retrieveProxy(ProxyDefine.Game_MusicPxy) as GameMusicPxy;
       
         if (songInfo.unlockType == "video") {
-            if (ASCAd.getInstance().getVideoFlag()) {
+            if (ASCAd_New.getInstance().getVideoFlag()) {
                 AudioManager.GetInstance(AudioManager).player.pauseMusic();
-                ASCAd.getInstance().showVideo((isSucces: any) => {
+                ASCAd_New.getInstance().showVideo((isSucces: any) => {
                     AudioManager.GetInstance(AudioManager).player.resumeMusic();
                     if (isSucces) {
                         game_MusicPxy.UnlockSong(songInfo.musicId);

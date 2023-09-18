@@ -15,13 +15,14 @@ import { ApplicationManager } from '../../applicationManager';
 import { PanelType } from '../../../Plugin/UIFrameWork/PanelType';
 import { GameUserPxy } from '../Proxy/gameUserPxy';
 import { ThemeController } from '../../game/themeController';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+import ASCAd_New from '../../../Plugin/ASCAd_New';
 
 export class StartGameCmd extends SimpleCommand {
     private info: SongInfo;
     public execute(notification: INotification): void {
         GameDirector.getInstance().IsGame = true;
-        ASCAd.getInstance().hideBanner();
+        ASCAd_New.getInstance().hideBanner();
         this.info = notification.getBody() as SongInfo;
         let startProgress = ApplicationManager.getInstance().startGamePanel.getComponentInChildren(ProgressBar);
         const _gamemusicPxy = Facade.getInstance().retrieveProxy(ProxyDefine.Game_MusicPxy) as GameMusicPxy;
@@ -54,7 +55,7 @@ export class StartGameCmd extends SimpleCommand {
                 GameDirector.getInstance().gameConfigure(clipRes, jsonRes)
                 this.sendNotification(CommandDefine.StartSongSucceedResponce, this.info.musicId);
                 ApplicationManager.getInstance().hideStartGamePanel();
-                ASCAd.getInstance().showBanner();
+                ASCAd_New.getInstance().showBanner();
             }
             Tween.stopAllByTarget(startProgress);
             this.fakeLoad(startProgress, cal);

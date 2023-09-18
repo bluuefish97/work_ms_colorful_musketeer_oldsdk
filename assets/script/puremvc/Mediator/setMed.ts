@@ -10,7 +10,7 @@ import { GameUserPxy } from "../Proxy/gameUserPxy";
 import { Facade } from "../../../Plugin/core/puremvc/patterns/facade/Facade";
 import { ProxyDefine } from "../proxyDefine";
 import { AudioEffectCtrl, ClipEffectType } from "../../../Plugin/AudioEffectCtrl";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+// import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 
 export class SetMed extends Mediator {
 

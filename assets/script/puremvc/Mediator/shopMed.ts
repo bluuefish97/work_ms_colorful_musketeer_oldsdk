@@ -1,5 +1,5 @@
 import { Node } from "cc";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+// import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 import AudioManager from "../../../Plugin/audioPlayer/AudioManager";
 import { INotification } from "../../../Plugin/core/puremvc/interfaces/INotification";
 import { Facade } from "../../../Plugin/core/puremvc/patterns/facade/Facade";
@@ -12,6 +12,7 @@ import { MsghintManager } from "../../tools/msghintManager";
 import { CommandDefine } from "../commandDefine";
 import { GameUserPxy } from "../Proxy/gameUserPxy";
 import { ProxyDefine } from "../proxyDefine";
+import ASCAd_New from "../../../Plugin/ASCAd_New";
 
 
 export class ShopMed extends Mediator {
@@ -26,9 +27,9 @@ export class ShopMed extends Mediator {
 
     private bindListener(): void {
         this.panel.adCallback = (name: string, call: Function) => {
-            if(ASCAd.getInstance().getVideoFlag()) {
+            if(ASCAd_New.getInstance().getVideoFlag()) {
                 AudioManager.GetInstance(AudioManager).player.pauseMusic();
-                ASCAd.getInstance().showVideo((suc: any) => {
+                ASCAd_New.getInstance().showVideo((suc: any) => {
                     AudioManager.GetInstance(AudioManager).player.resumeMusic();
                     if(suc) {
                         this._gameUserPxy.setLockSkin(name);

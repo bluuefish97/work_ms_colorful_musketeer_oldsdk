@@ -43,7 +43,6 @@ export class RevivePanel extends BasePanel {
     }
 
     onPause() {
-        super.onPause();
         this.node.setSiblingIndex(0);
         this.onPauseCall && this.onPauseCall();
         this.node.resumeSystemEvents(false);

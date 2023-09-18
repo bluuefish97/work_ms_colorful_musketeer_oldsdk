@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, JsonAsset, SpriteFrame, Sprite, color, Color, UIOpacity, tween, director, misc, Label, ProgressBar, Prefab, Tween, v3, view, easing, math, assetManager, instantiate, getWorldTransformUntilRoot, Camera, AudioClip, game, UITransform, ParticleSystem2D, v4 } from 'cc';
+import { _decorator, Component, Node, JsonAsset, SpriteFrame, Sprite, color, Color, UIOpacity, tween, director, misc, Label, ProgressBar, Prefab, Tween, v3, view, easing, math, assetManager, instantiate, getWorldTransformUntilRoot, Camera, AudioClip, game, UITransform, ParticleSystem2D, v4, log } from 'cc';
 import { PointBuilder } from './pointBuilder';
 import { Player } from './player';
 import { CameraController } from './cameraController';
@@ -18,6 +18,7 @@ import { AudioEffectCtrl, ClipEffectType } from '../../Plugin/AudioEffectCtrl';
 import { Point } from './point';
 import { AppPlatformController, App_Platform } from '../../Plugin/AppPlatformController';
 import { ApplicationManager } from '../applicationManager';
+import ASCAd_New from '../../Plugin/ASCAd_New';
 const { ccclass, property } = _decorator;
 const deltaX_Max: number = 50000
 const HMove_factor: number = 2;             //子弹左右闪避的速度
@@ -98,6 +99,12 @@ export class GameDirector extends Component {
 
     @property({ type: Node})
     playerContent: Node = null;
+
+
+    @property(Node)
+    nativeIconPos1: Node = null;
+    @property(Node)
+    nativeIconPos2: Node = null;
     
 
     public _jsonRes: Array<any> = new Array<any>();
@@ -448,6 +455,17 @@ export class GameDirector extends Component {
         this.updateProBar(0);
         this.cameraController.reset();
         this.guidance.active = true;
+
+
+        // let pos1=this.nativeIconPos1.getWorldPosition();
+        // let pos2=this.nativeIconPos2.getWorldPosition();
+        // if ( ASCAd_New.getInstance().getBlockFlag(1,pos1.x,pos1.y)) {
+        //     ASCAd_New.getInstance().showBlock(1,pos1.x,pos1.y);
+        // }
+
+        // if ( ASCAd_New.getInstance().getBlockFlag(2,pos2.x,pos2.y)) {
+        //     ASCAd_New.getInstance().showBlock(2,pos2.x,pos2.y);
+        // }
     }
 
     public gameConfigure(clipRes: any, jsonRes: any) {
@@ -462,6 +480,17 @@ export class GameDirector extends Component {
         let playerPos = this.mainCamera.convertToUINode(v3(0, 0, 0), this.canvas);
         this.playerContent.setPosition(playerPos);
         this.canvas.active = true;
+        let pos1=this.nativeIconPos1.getWorldPosition();
+        let pos2=this.nativeIconPos2.getWorldPosition();
+        console.log("-------this.nativeIconPos1.getWorldPosition()",pos1.x, pos1.y);
+        
+        if ( ASCAd_New.getInstance().getBlockFlag(1,pos1.x,pos1.y)) {
+            ASCAd_New.getInstance().showBlock(1,pos1.x,pos1.y);
+        }
+
+        if ( ASCAd_New.getInstance().getBlockFlag(2,pos2.x,pos2.y)) {
+            ASCAd_New.getInstance().showBlock(2,pos2.x,pos2.y);
+        }
         this.showHardLvTip(this._playHardLv, this.action.bind(this))
     }
 

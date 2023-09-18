@@ -8,9 +8,10 @@ import { ConsumablesAlterInfo, ConsumablesType } from '../../GloalDefine';
 import { DiaSupplementPanel } from '../../panels/diaSupplementPanel';
 import { CommandDefine } from '../commandDefine';
 import { AudioEffectCtrl, ClipEffectType } from '../../../Plugin/AudioEffectCtrl';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
 import AudioManager from '../../../Plugin/audioPlayer/AudioManager';
 import { MsghintManager } from '../../tools/msghintManager';
+import ASCAd_New from '../../../Plugin/ASCAd_New';
 const { ccclass, property } = _decorator;
 
 @ccclass('DiaSupplementMed')
@@ -30,8 +31,8 @@ export class DiaSupplementMed extends Mediator {
         this._panel.setDiaAdBtnClickEvent(() => {
             AudioEffectCtrl.getInstance().playEffect(ClipEffectType.normalBtnClip);
             AudioManager.GetInstance(AudioManager).player.pauseMusic();
-            if (ASCAd.getInstance().getVideoFlag()) {
-                ASCAd.getInstance().showVideo((isSucces: any) => {
+            if (ASCAd_New.getInstance().getVideoFlag()) {
+                ASCAd_New.getInstance().showVideo((isSucces: any) => {
                 AudioManager.GetInstance(AudioManager).player.resumeMusic();
                     if(isSucces)
                     {
@@ -50,14 +51,10 @@ export class DiaSupplementMed extends Mediator {
 
         this._panel.onEnterCall = () => {
             let adcall = () => {
-                if(ASCAd.getInstance().getNativeImageFlag()) {
-                    ASCAd.getInstance().showNativeImage(0, 0, 0, 0, 1);
-                } else{
-                    ASCAd.getInstance().showBanner();
-                }
+                ASCAd_New.getInstance().showBanner();
             }
-            if (ASCAd.getInstance().getIntersFlag()) {
-                ASCAd.getInstance().showInters(()=>{
+            if (ASCAd_New.getInstance().getIntersFlag()) {
+                ASCAd_New.getInstance().showInters(()=>{
                     adcall()
                 });
             } else {
@@ -77,8 +74,8 @@ export class DiaSupplementMed extends Mediator {
                 }
             })
             this._panel = null
-            ASCAd.getInstance().hideBanner();
-            ASCAd.getInstance().hideNativeImage();
+            ASCAd_New.getInstance().hideBanner();
+            //ASCAd.getInstance().hideNativeImage();
         }
     }
 

@@ -1,10 +1,11 @@
 
 import { _decorator, Component, Node, ScrollView, Prefab, instantiate, resources, Sprite, assetManager, SpriteFrame, ParticleSystem2D, ToggleContainer, Toggle, UITransform, Label } from 'cc';
-import ASCAd from '../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../Plugin/ADSDK/ASCAd';
 import { AudioEffectCtrl, ClipEffectType } from '../../Plugin/AudioEffectCtrl';
 import { PoolManager } from '../../Plugin/PoolManager';
 import BasePanel from '../../Plugin/UIFrameWork/BasePanel';
 import { SongTableType } from '../GloalDefine';
+import ASCAd_New from '../../Plugin/ASCAd_New';
 const { ccclass, property } = _decorator;
 
 @ccclass('SkinPanel')
@@ -144,8 +145,8 @@ export class SkinPanel extends BasePanel {
                     this.tipTimes = 4;
                     break;
                 case 4:
-                    if(ASCAd.getInstance().getIntersFlag()) {
-                        ASCAd.getInstance().showInters();
+                    if(ASCAd_New.getInstance().getIntersFlag()) {
+                        ASCAd_New.getInstance().showInters(()=>{});
                     } else {
                     }
                     this.tipTimes = 0;

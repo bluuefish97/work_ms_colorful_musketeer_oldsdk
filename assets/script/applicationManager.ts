@@ -1,7 +1,6 @@
 import { _decorator, Component, Node, UITransform, UIOpacity, game, AudioSource, ProgressBar, Enum, systemEvent, SystemEvent, Game } from 'cc';
 import { ApplicationFacade } from './puremvc/applicationFacade';
 import { App_Platform, AppPlatformController } from '../Plugin/AppPlatformController';
-import LocalStorage from '../Plugin/ADSDK/utils/LocalStorage';
 const { ccclass, property } = _decorator;
 
 @ccclass('ApplicationManager')
@@ -9,6 +8,12 @@ export class ApplicationManager extends Component {
 
     @property
     develop: boolean = false;
+
+    @property({
+        displayName: '渠道id',
+        visible: true
+    })
+    channelId:number=0;
 
     @property({
         type: Enum(App_Platform),
@@ -109,17 +114,6 @@ export class ApplicationManager extends Component {
         if(this.loadingTimes <= 0){
             this.mask.active = false;
         }
-    }
-    getAreaShieldingSwitch(){
-        if(!LocalStorage.getJsonData('adConfig')){
-
-            console.log("=======未保存adConfig")
-            return  false;
-        }else{
-            console.log("=======areaShieldingSwitch",LocalStorage.getJsonData('adConfig').areaShieldingSwitch);
-            return  LocalStorage.getJsonData('adConfig').areaShieldingSwitch;
-        }
-     
     }
 }
 

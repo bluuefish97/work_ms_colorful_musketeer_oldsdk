@@ -13,7 +13,8 @@ import UIPanelController from '../../../Plugin/UIFrameWork/UIPanelControllor';
 import { PanelType } from '../../../Plugin/UIFrameWork/PanelType';
 import { INotification } from '../../../Plugin/core/puremvc/interfaces/INotification';
 import AudioManager from '../../../Plugin/audioPlayer/AudioManager';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+import ASCAd_New from '../../../Plugin/ASCAd_New';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
 const { ccclass, property } = _decorator;
 
 @ccclass('RecommendPanelMed')
@@ -32,11 +33,7 @@ export class RecommendPanelMed extends Mediator {
 
     private bindListener(): void {
         this._panel.onEnterCall = () => {
-            if(ASCAd.getInstance().getNativeImageFlag()) {
-                ASCAd.getInstance().showNativeImage(900, 450, view.getVisibleSize().width / 2, 300, 1);
-            } else {
-                ASCAd.getInstance().showBanner();
-            }
+            ASCAd_New.getInstance().showBanner();
             this.newSongInfo = this.getNewSong();
             this._panel.setSongNameLabel(this.newSongInfo.musicName);
             let id = this.game_musicPxy.getSongListId(this.newSongInfo.musicName);
@@ -49,8 +46,8 @@ export class RecommendPanelMed extends Mediator {
             Facade.getInstance().sendNotification(CommandDefine.PlaySongRequest, new PlaySongInfo(this.newSongInfo.musicName, SongPlayType.Immediately));
         }
         this._panel.onExitCall = () => {
-            ASCAd.getInstance().hideNativeImage();
-            ASCAd.getInstance().hideBanner();
+            ASCAd_New.getInstance().hideNativeImage();
+            ASCAd_New.getInstance().hideBanner();
             this._panel = null;
         }
         this._panel.songPlaySwitchBtnClickEvent(() => {

@@ -1,5 +1,5 @@
 import { _decorator } from "cc";
-import ASCAd from "./ADSDK/ASCAd";
+// import ASCAd from "./ADSDK/ASCAd";
 
 const { ccclass, property } = _decorator;
 
@@ -76,7 +76,7 @@ export class ReportAnalytics {
         // } else {
             let newData = {}
             newData[name2] = data;
-            ASCAd.getInstance().reportAnalytics(name, newData);
+            //ASCAd.getInstance().reportAnalytics(name, newData);
         // }
         console.log("埋点     " + name + '  ' +  name2 + '  ' + data)
     }

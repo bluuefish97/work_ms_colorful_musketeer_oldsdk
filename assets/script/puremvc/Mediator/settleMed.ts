@@ -14,10 +14,11 @@ import { ApplicationManager } from "../../applicationManager";
 import { AudioEffectCtrl, ClipEffectType } from "../../../Plugin/AudioEffectCtrl";
 import RecController, { RecState } from "../../../Plugin/bytedance_screenRec/recController";
 import { ThemeController } from "../../game/themeController";
-import ASCAd from "../../../Plugin/ADSDK/ASCAd";
+// import ASCAd from "../../../Plugin/ADSDK/ASCAd";
 import { GameMusicPxy } from "../Proxy/gameMusicPxy";
 import SongListManager from "../../tools/SongListManager";
 import { AppPlatformController, App_Platform } from "../../../Plugin/AppPlatformController";
+import ASCAd_New from "../../../Plugin/ASCAd_New";
 
 export class SettleMed extends Mediator {
 
@@ -35,18 +36,12 @@ export class SettleMed extends Mediator {
     private bindListener(): void {
         this._panel.onEnterCall = () => {
             ThemeController.getInstance().envParnet.active = false;
-            if(ASCAd.getInstance().getNativeIconFlag()) {
-                ASCAd.getInstance().showNativeIcon(200, 200, 0.8, 0.6);
-            }
+         
             let adcall = () => {
-                if(ASCAd.getInstance().getNativeImageFlag()) {
-                    ASCAd.getInstance().showNativeImage(0, 0, 0, 0, 1);
-                } else{
-                    ASCAd.getInstance().showBanner();
-                }
+                ASCAd_New.getInstance().showBanner();
             }
-            if (ASCAd.getInstance().getIntersFlag()) {
-                ASCAd.getInstance().showInters(()=>{
+            if (ASCAd_New.getInstance().getIntersFlag()) {
+                ASCAd_New.getInstance().showInters(()=>{
                     adcall()
                 });
             } else {
@@ -77,9 +72,7 @@ export class SettleMed extends Mediator {
         })
         this._panel.onExitCall = () => {
             this._panel = null;
-            ASCAd.getInstance().hideBanner();
-            ASCAd.getInstance().hideNativeImage();
-            ASCAd.getInstance().hideNativeIcon();
+            ASCAd_New.getInstance().hideBanner();
             Facade.getInstance().removeMediator(MediatorDefine.SongElementMed + "FinshElement");
             this.songListManager.clearAll();
         }

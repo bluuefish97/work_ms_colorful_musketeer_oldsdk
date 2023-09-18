@@ -4,7 +4,8 @@ import BasePanel from '../../Plugin/UIFrameWork/BasePanel';
 import { SongPlayType, SongTableType } from '../GloalDefine';
 import { PoolManager } from '../../Plugin/PoolManager';
 import { AudioEffectCtrl, ClipEffectType } from '../../Plugin/AudioEffectCtrl';
-import ASCAd from '../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../Plugin/ADSDK/ASCAd';
+import ASCAd_New from '../../Plugin/ASCAd_New';
 const { ccclass, property } = _decorator;
 
 @ccclass('HomePanel')
@@ -47,11 +48,16 @@ export class HomePanel extends BasePanel {
 
     public onEnter(): void {
         super.onEnter();
-        let pos1=this.nativeIconPos1.getWorldPosition();
-        let pos2=this.nativeIconPos2.getWorldPosition();
-        ASCAd.getInstance().getNativeIconFlag() && ASCAd.getInstance().showNativeIcon(200, 200, pos1.x, pos1.y);
-        ASCAd.getInstance().getNativeIconFlag() && ASCAd.getInstance().showNativeIcon(200, 200, pos2.x, pos2.y);
-     
+        // let pos1=this.nativeIconPos1.getWorldPosition();
+        // let pos2=this.nativeIconPos2.getWorldPosition();
+       
+        // if ( ASCAd_New.getInstance().getBlockFlag(1,pos1.x,pos1.y)) {
+        //     ASCAd_New.getInstance().showBlock(1,pos1.x,pos1.y);
+        // }
+
+        // if ( ASCAd_New.getInstance().getBlockFlag(2,pos2.x,pos2.y)) {
+        //     ASCAd_New.getInstance().showBlock(2,pos2.x,pos2.y);
+        // }
     }
 
     onPause() {
@@ -64,15 +70,17 @@ export class HomePanel extends BasePanel {
 
     public onExit(): void {
         super.onExit();
-        ASCAd.getInstance().hideNativeIcon();
+        // ASCAd_New.getInstance().hideBlock(1);
+        // ASCAd_New.getInstance().hideBlock(2);
     }
 
     setMoreBtn() {
-        if(ASCAd.getInstance().getChannelId() == '1007') {
-            this.moreGameNode.active = true;
-        } else {
-            this.moreGameNode.active = false;
-        }
+        // if(ASCAd.getInstance().getChannelId() == '1007') {
+        //     this.moreGameNode.active = true;
+        // } else {
+        //     this.moreGameNode.active = false;
+        // }
+        this.moreGameNode.active = false;
     }
 
     public setListCallback(callback: Function) {
@@ -123,7 +131,7 @@ export class HomePanel extends BasePanel {
     }
 
     clickMoreGame() {
-        ASCAd.getInstance().getOPPOShowMoreGameFlag()&&ASCAd.getInstance().showOPPOMoreGame();
+       // ASCAd.getInstance().getOPPOShowMoreGameFlag()&&ASCAd.getInstance().showOPPOMoreGame();
     }
 
     private scrollViewCallBack(scrollView: ScrollView) {

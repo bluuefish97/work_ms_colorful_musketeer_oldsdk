@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Prefab, v3, JsonAsset, Vec3, resources, Texture2D, Vec2, Color, v2, log, math, game, Vec4, v4 } from 'cc';
+import { _decorator, Component, Node, Prefab, v3, JsonAsset, Vec3, resources, Texture2D, Vec2, Color, v2, log, math, game, Vec4, v4, warn } from 'cc';
 import { Constant } from './constant';
 import { Point } from './point';
 import { PoolManager } from '../../Plugin/PoolManager';
@@ -258,7 +258,7 @@ export class PointBuilder extends Component {
      * 生成管理器重置
      */
     public builderReset() {
-        log("生成管理器重置")
+        warn("生成管理器重置")
         this._curEndId = 0;
         this.rewardNum = 0;
         this.protectPointNum = 0;

@@ -6,7 +6,7 @@ import RecController, { RecState } from '../../../Plugin/bytedance_screenRec/rec
 import { MsghintManager } from '../../tools/msghintManager';
 import { CommandDefine } from '../commandDefine';
 import { ApplicationManager } from '../../applicationManager';
-import ASCAd from '../../../Plugin/ADSDK/ASCAd';
+// import ASCAd from '../../../Plugin/ADSDK/ASCAd';
 
 export class EndRecCmd extends SimpleCommand {
 
@@ -30,11 +30,11 @@ export class EndRecCmd extends SimpleCommand {
         }
         else
         {
-            ASCAd.getInstance().stopGameVideo((videoPath: string)=>{
-                console.log('视频录制成功 ',videoPath);
-                RecController.getInstance().recPath=videoPath;
-               this.sendNotification(CommandDefine.EndRecResponce);
-            });
+            // ASCAd.getInstance().stopGameVideo((videoPath: string)=>{
+            //     console.log('视频录制成功 ',videoPath);
+            //     RecController.getInstance().recPath=videoPath;
+            //    this.sendNotification(CommandDefine.EndRecResponce);
+            // });
             RecController.getInstance().recState=RecState.WaitRecing;
             RecController.getInstance().StopRec();
         }

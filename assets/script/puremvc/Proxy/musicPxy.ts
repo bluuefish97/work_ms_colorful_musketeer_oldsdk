@@ -7,7 +7,6 @@ import { CommandDefine } from "../commandDefine";
 import { Facade } from "../../../Plugin/core/puremvc/patterns/facade/Facade";
 import { ProxyDefine } from "../proxyDefine";
 import { GameMusicPxy } from "./gameMusicPxy";
-import { ApplicationManager } from "../../applicationManager";
 
 export class MusicPxy extends Proxy {
 
@@ -23,16 +22,8 @@ export class MusicPxy extends Proxy {
         * 加载歌单
         */
     private getTable() {
-        console.log("MusicPxy 开始请求歌单配置...")
-        let url=GloalDefine.MusicTableUrl
-        console.log("ApplicationManager.getInstance().getAreaShieldingSwitch()...",ApplicationManager.getInstance().getAreaShieldingSwitch())
-        if(ApplicationManager.getInstance().getAreaShieldingSwitch()){
-            url =GloalDefine.MusicTableCNUrl;
-        }else{
-            url =GloalDefine.MusicTableUrl;
-        }
-
-        MusicManager.GetInstance(MusicManager).Loader.LoadMusicTable(url, (res: any) => {
+        log("MusicPxy 开始请求歌单配置...")
+        MusicManager.GetInstance(MusicManager).Loader.LoadMusicTable(GloalDefine.MusicTableUrl, (res: any) => {
             this.data = this.filterBag(res);
             log(  this.data);
             this.filterDefaultUnlockSong(res);
