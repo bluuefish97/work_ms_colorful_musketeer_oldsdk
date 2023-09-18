@@ -1,0 +1,68 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a1742a45-44ee-4636-9f25-408f1f27e1af",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "taril01": {
+      "ver": "1.0.4",
+      "uuid": "f9867354-4545-43f1-be19-42ed94133b56",
+      "rawTextureUuid": "a1742a45-44ee-4636-9f25-408f1f27e1af",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 83,
+      "height": 114,
+      "rawWidth": 83,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a1742a45-44ee-4636-9f25-408f1f27e1af@6c48a",
+      "displayName": "taril01",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a1742a45-44ee-4636-9f25-408f1f27e1af"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "redirect": "a1742a45-44ee-4636-9f25-408f1f27e1af@6c48a"
+  }
+}

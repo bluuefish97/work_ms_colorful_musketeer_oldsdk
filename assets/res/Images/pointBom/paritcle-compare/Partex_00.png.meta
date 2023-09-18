@@ -1,0 +1,68 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5d1210e5-7790-403a-ab7c-7d669135a5ed",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "Partex_00": {
+      "ver": "1.0.4",
+      "uuid": "5d1210e5-7790-403a-ab7c-7d669135a5ed@6c48a",
+      "rawTextureUuid": "5d1210e5-7790-403a-ab7c-7d669135a5ed",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 64,
+      "height": 64,
+      "rawWidth": 64,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5d1210e5-7790-403a-ab7c-7d669135a5ed@6c48a",
+      "displayName": "Partex_00",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5d1210e5-7790-403a-ab7c-7d669135a5ed"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": false,
+    "type": "texture",
+    "redirect": "5d1210e5-7790-403a-ab7c-7d669135a5ed@6c48a"
+  }
+}

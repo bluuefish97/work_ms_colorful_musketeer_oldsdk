@@ -1,0 +1,21 @@
+﻿[
+   
+    {
+        "id": 0,
+        "obtainType": "dia",
+        "consumeVal": 150,
+        "awardVal": 3
+    },
+    {
+        "id": 1,
+        "obtainType": "dia",
+        "consumeVal": 200,
+        "awardVal": 5
+    },
+    {
+        "id": 2,
+        "obtainType": "ad",
+        "consumeVal": 0,
+        "awardVal": 10
+    }
+]

@@ -1,0 +1,68 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5aa442df-5167-46eb-aa48-69ad6b2855b7",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "BS_SN_Map_T1": {
+      "ver": "1.0.4",
+      "uuid": "d611d7f2-af4b-453e-a742-0131f326940e",
+      "rawTextureUuid": "5aa442df-5167-46eb-aa48-69ad6b2855b7",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 512,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5aa442df-5167-46eb-aa48-69ad6b2855b7@6c48a",
+      "displayName": "BS_SN_Map_T1",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5aa442df-5167-46eb-aa48-69ad6b2855b7"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "redirect": "5aa442df-5167-46eb-aa48-69ad6b2855b7@6c48a"
+  }
+}

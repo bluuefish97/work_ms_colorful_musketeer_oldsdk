@@ -1,0 +1,168 @@
+diff a/assets/Plugin/reportAnalytics.ts b/assets/Plugin/reportAnalytics.ts	(rejected hunks)
+@@ -1,105 +0,71 @@
+-import { _decorator } from "cc";
+-import ASCAd from "./ADSDK/ASCAd";
+ 
++import { _decorator, Component, Node } from 'cc';
++import { AppPlatformController, App_Platform } from './AppPlatformController';
+ const { ccclass, property } = _decorator;
+ 
+-export class ReportAnalytics {
+-    private static instance: ReportAnalytics
+-    public static getInstance(): ReportAnalytics {
+-        if (!ReportAnalytics.instance) {
+-            ReportAnalytics.instance = new ReportAnalytics()
+-            ReportAnalytics.instance.startTime = new Date().getTime();
+-            ReportAnalytics.instance.LocalADCount = 0;
+-        }
+-        return ReportAnalytics.instance
+-    }
+-    public startTime: number = 0
+-    public LocalADCount: number = 0;
+-    public LiftTime: number = 0
++export enum event_Totik {
++    userData = 'userData',
++    appLoad = 'appLoad',
++    gameLoad = 'gameLoad',
++    startSong = 'startSong',
++    collectSong = 'collectSong',
++    unCollectSong = 'unCollectSong',
++    unlockSong = 'unlockSong',
++    gameFail = "gameFail",
++    gameWin = "gameWin",
++    gameRevive = "gameRevive",
++    getDia = "getDia",
++    cancalDia = "cancalDia",
++    getPower = "getPower",
++    cancalPower = "cancalPower",
++    unlockSkin = "unlockSkin"
++}
+ 
++export enum songEnv {
++    recommend = 'recommend ',
++    all = 'all',
++    new = 'new',
++    unPass = 'unPass',
++    pass = 'pass',
++    collect = 'collect',
++    fail_new = "fail_new",
++    fail_next = "fail_next",
++    fail_again = "fail_again",
++    win_new = "win_new",
++    win_next = "win_next",
++    win_again = "win_again",
++}
+ 
+-    public static YDViewShowState: string = "";
++export enum unlockWay {
++    dia = "dia",
++    video = "video"
++}
+ 
+-    //数据打点
+-    reportAnalytics(name: string, name2: string, data: any) {
+-        var DATA = {}
+-        switch (name) {
+-            case "net_eventAnalytics":
+-                DATA = {
+-                    app_request: 0,
+-                    app_response: 0,
+-                    song_request: 0,
+-                    song_response: 0,
+-                    json_request: 0,
+-                    json_response: 0,
+-                    game_request: 0,
+-                    game_response: 0,
+-                }
+-                break;
+-            case "viewShow_eventAnalytics":
+-                DATA = {
+-                    main: 0,
+-                    revive: 0,
+-                    fail: 0,
+-                    pass: 0,
+-                    diabank: 0,
+-                    songRecommed: 0,
+-                    diabank_nodia: 0,
+-                }
+-                break;
+-            case "btnClick_eventAnalytics":
+-                DATA = {
+-                    dia: 0,
+-                    main: 0,
+-                    startSong: '',
+-                    diaUnlock: '',
+-                    cancalRevive: 0,
+-                    back: 0,
+-                    again: 0,
+-                }
+ 
+-                break;
+-            case "adBtnClick_eventAnalytics":
+-                DATA = {
+-                    songUnlock: '',
+-                    diaGet: '',
+-                    revive: '',
+-                }
+-                break;
+-        }
+-        DATA[name2] = data
+-        // //@ts-ignore
+-        // if (config.platform == Platform.douYin && typeof tt != "undefined") {
+-        //     //@ts-ignore
+-        //     tt.reportAnalytics(name, DATA);
+-        // } else {
+-            let newData = {}
+-            newData[name2] = data;
+-            ASCAd.getInstance().reportAnalytics(name, newData);
+-        // }
+-        console.log("埋点     " + name + '  ' +  name2 + '  ' + data)
+-    }
+-    /**
+-     * 单次生命周期分析
+-     */
+-    SingleLifeCycleAnalytics() {
+-        this.LiftTime = Math.round((new Date().getTime() - this.startTime) / 1000);
+-        if (this.LiftTime < 200) {
+-            this.LiftTime = 200
+-        } else if (this.LiftTime < 250) { this.LiftTime = 250 }
+-        else if (this.LiftTime < 300) { this.LiftTime = 300 }
+-        else if (this.LiftTime < 350) { this.LiftTime = 350 }
+-        else if (this.LiftTime < 400) { this.LiftTime = 400 }
+-        else if (this.LiftTime < 450) { this.LiftTime = 450 }
+-        else { this.LiftTime = 500 }
+-        //   console.log("单次生命周期分析:     " + "广告次数: "+ this.LocalADCount+ "  生命周期:   "+  this.LiftTime)
+-        //@ts-ignore
+-        if (config.platform == Platform.douYin && typeof tt != "undefined") {
+-            //@ts-ignore
+-            tt.reportAnalytics('SingleLifeCycle', {
+-                ADCount: this.LocalADCount,
+-                LiftTime: this.LiftTime,
+-            });
++export enum assetEnv {
++    active = "active",
++    passive_powerUnenough = "passive_powerUnenough",
++    passive_unlockSong = "passive_unlockSong",
++    passive_unlockSkin = "passive_unlockSkin",
++}
++
++@ccclass('ReportAnalytics')
++export class ReportAnalytics {
++    static SongUnitEnv: songEnv;
++    static UnlockWay: unlockWay;
++    static AssetEnv: assetEnv;
++    static PowerAssetEnv: assetEnv;
++    static isDirect: boolean;
++    static report(event: string, data: any) {
++        console.log("事件上报----------------------------");
++
++        console.log('event  ', event);
++        console.log('data  ', data);
++        if (AppPlatformController.Platform == App_Platform.GP_Tiktok) {
++            tt && tt.reportAnalytics(event, data);
+         }
++
+     }
+ }
++
++

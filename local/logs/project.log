@@ -1,0 +1,112 @@
+2023-09-18 10:25:48-log: [Package] menu@1.0.0 enable
+2023-09-18 10:25:48-log: [Package] profile@1.0.0 enable
+2023-09-18 10:25:48-log: [Package] messages@1.0.0 enable
+2023-09-18 10:25:48-log: [Package] program@1.0.0 enable
+2023-09-18 10:25:48-log: [Package] device@1.0.1 enable
+2023-09-18 10:25:48-log: [Package] ui-kit@1.0.1 enable
+2023-09-18 10:25:48-log: [Package] tester@1.0.0 enable
+2023-09-18 10:25:48-log: [Package] preferences@1.0.0 enable
+2023-09-18 10:25:49-log: Setup mods mgr.: 369.632ms
+2023-09-18 10:25:49-log: [Package] engine@1.0.5 enable
+2023-09-18 10:25:55-log: [Package] programming@1.0.0 enable
+2023-09-18 10:25:55-log: [Package] asset-db@1.0.0 enable
+2023-09-18 10:25:55-log: [Package] console@1.0.0 enable
+2023-09-18 10:25:55-log: [Package] scene@1.0.0 enable
+2023-09-18 10:25:56-log: [Package] assets@1.0.0 enable
+2023-09-18 10:25:56-log: [Package] inspector@1.0.0 enable
+2023-09-18 10:25:56-log: [Package] hierarchy@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] preview@1.0.1 enable
+2023-09-18 10:25:59-log: [Package] animator@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] builder@1.2.8 enable
+2023-09-18 10:25:59-log: [Package] node-library@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] shortcuts@1.0.1 enable
+2023-09-18 10:25:59-log: [Package] importer@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] package-asset@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] reference-image@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] channel-upload-tools@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] runtime-dev-tools@1.0.0 enable
+2023-09-18 10:25:59-log: [Package] alipay-mini-game@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] android@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] baidu-mini-game@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] bytedance-mini-game@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] huawei-agc@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] ios@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] ios-app-clip@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] mac@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] native@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] ohos@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] web-desktop@1.0.0 enable
+2023-09-18 10:26:00-log: [Package] web-mobile@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] wechatgame@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] windows@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] xiaomi-quick-game@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] cocos-play@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] huawei-quick-game@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] link-sure@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] oppo-mini-game@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] qtt@1.0.0 enable
+2023-09-18 10:26:01-log: [Package] vivo-mini-game@1.0.0 enable
+2023-09-18 10:26:02-log: [Package] cocos-service@3.0.1 enable
+2023-09-18 10:26:03-log: [Package] extension@3.0.8 enable
+2023-09-18 10:26:03-log: [Package] im-plugin@3.0.6 enable
+2023-09-18 10:26:01-warn: [Asset DB] Please specifiy a default value for "cc._internal.migrate-animation_clip-3-3-0.Helper.duration" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2023-09-18 10:26:01-warn: [Asset DB] Please specifiy a default value for "cc._internal.migrate-animation_clip-3-3-0.Helper._keys" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2023-09-18 10:26:01-warn: [Asset DB] Please specifiy a default value for "cc._internal.migrate-animation_clip-3-3-0.Helper._curves" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2023-09-18 10:26:01-warn: [Asset DB] Please specifiy a default value for "cc._internal.migrate-animation_clip-3-3-0.Helper._commonTargets" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2023-09-18 10:26:03-log: [Package] lightmap@1.0.3 enable
+2023-09-18 10:26:18-warn: [Asset DB] 材质 [lambert1] 的 [Transparent color] 属性不允许是贴图。 [{asset(5a1e460d-2488-43a0-bb29-5fa04633aad4)}]
+2023-09-18 10:26:18-warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2023-09-18 10:26:29-warn: [Asset DB] You are trying to destroy a object twice or more.
+2023-09-18 10:26:29-warn: [Asset DB] You are trying to destroy a object twice or more.
+2023-09-18 10:26:36-log: [Scene] begin init
+2023-09-18 10:26:36-log: [Scene] require engine end
+2023-09-18 10:26:36-log: [Scene] Serialize end
+2023-09-18 10:26:36-log: [Scene] configureStartup end
+2023-09-18 10:26:36-info: [Scene] WebGL2 device initialized.
+2023-09-18 10:26:36-log: [Scene] Cocos Creator v3.3.0
+2023-09-18 10:26:50-log: [Scene] No need to specify the "type" of "ADIronConfig.btn_size" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:26:50-log: [Scene] No need to specify the "type" of "ADIronConfig.btn_pos" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:26:51-log: [Scene] No need to specify the "type" of "textTure2DAndOffset.offset" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:26:51-info: [Scene] Forward render pipeline initialized.
+2023-09-18 10:26:51-log: [Scene] openEngine end
+2023-09-18 10:26:51-log: [Scene] configureEngine end
+2023-09-18 10:26:52-log: [Scene] No need to specify the "type" of "ADIronConfig.btn_size" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:26:52-log: [Scene] No need to specify the "type" of "ADIronConfig.btn_pos" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:26:52-log: [Scene] No need to specify the "type" of "textTure2DAndOffset.offset" because cc.Vec2 is a child class of ValueType.
+2023-09-18 10:27:18-log: Use preview template {link(E:\2023_work\Projects\work_ms_colorful_musketeer_oldsdk\preview-template\index.ejs)}

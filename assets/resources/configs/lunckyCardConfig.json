@@ -1,0 +1,128 @@
+﻿[
+    {
+        "id": 0,
+        "cardName": "默认",
+        "cardDes": "酷炫耳机",
+        "ironPath": "card_shiwu",
+        "awardType": "积分",
+        "cardawardUnit": 1,
+        "Prob": 0.1
+    },
+    {
+        "id": 1,
+        "cardName": "默认",
+        "cardDes": "钻石X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.1
+    },
+    {
+        "id": 2,
+        "cardName": "默认",
+        "cardDes": "T30.月兔",
+        "ironPath": "card_jifen",
+        "awardType": "皮肤",
+        "cardawardUnit": 1,
+        "Prob": 0.3
+    },
+    {
+        "id": 3,
+        "cardName": "默认",
+        "cardDes": "钻石X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "card_shiwu",
+        "cardawardUnit": 50,
+        "Prob": 0.3
+    },
+    {
+        "id": 4,
+        "cardName": "默认",
+        "cardDes": "酷炫耳机",
+        "ironPath": "card_jifen",
+        "awardType": "积分",
+        "cardawardUnit": 1,
+        "Prob": 0.5
+    },
+    {
+        "id": 5,
+        "cardName": "默认",
+        "cardDes": "钻石X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.5
+    },
+    {
+        "id": 6,
+        "cardName": "默认",
+        "cardDes": "积分X50",
+        "ironPath": "card_jifen",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.5
+    },
+    {
+        "id": 7,
+        "cardName": "默认",
+        "cardDes": "酷炫耳机",
+        "ironPath": "card_shiwu",
+        "awardType": "积分",
+        "cardawardUnit": 1,
+        "Prob": 0.5
+    },
+    {
+        "id": 8,
+        "cardName": "默认",
+        "cardDes": "钻石X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.7
+    },
+    {
+        "id": 9,
+        "cardName": "默认",
+        "cardDes": "T30.月兔",
+        "ironPath": "card_jifen",
+        "awardType": "皮肤",
+        "cardawardUnit": 1,
+        "Prob": 0.7
+    },
+    {
+        "id": 10,
+        "cardName": "默认",
+        "cardDes": "钻石X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.7
+    },
+    {
+        "id": 15,
+        "cardName": "默认",
+        "cardDes": "Kar98k",
+        "ironPath": "card_shiwu",
+        "awardType": "皮肤",
+        "cardawardUnit": 1,
+        "Prob": 0.9
+    },
+    {
+        "id": 14,
+        "cardName": "默认",
+        "cardDes": "积分X50",
+        "ironPath": "card_zuanshi",
+        "awardType": "消耗品",
+        "cardawardUnit": 50,
+        "Prob": 0.9
+    },
+    {
+        "id": 13,
+        "cardName": "默认",
+        "cardDes": "钻石X10",
+        "ironPath": "card_shiwu",
+        "awardType": "消耗品",
+        "cardawardUnit": 10,
+        "Prob": 0.9
+    }
+]

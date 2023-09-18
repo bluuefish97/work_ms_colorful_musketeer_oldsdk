@@ -1,0 +1,68 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e55f88e4-921c-4fe7-a92d-dc2d5a69acec",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "BS_Grass_T3": {
+      "ver": "1.0.4",
+      "uuid": "4db440f2-e82f-4542-85e9-604502125825",
+      "rawTextureUuid": "e55f88e4-921c-4fe7-a92d-dc2d5a69acec",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 256,
+      "height": 256,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e55f88e4-921c-4fe7-a92d-dc2d5a69acec@6c48a",
+      "displayName": "BS_Grass_T3",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e55f88e4-921c-4fe7-a92d-dc2d5a69acec"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "redirect": "e55f88e4-921c-4fe7-a92d-dc2d5a69acec@6c48a"
+  }
+}

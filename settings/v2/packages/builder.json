@@ -1,0 +1,14 @@
+{
+  "__version__": "1.2.8",
+  "splash-setting": {
+    "url": "E:\\CocosProject\\ms-colorful-musketeer\\assets\\res\\sprites\\pag\\image.png",
+    "displayWatermark": false,
+    "displayRatio": 0.6,
+    "clearColor": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+    }
+  }
+}

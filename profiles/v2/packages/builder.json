@@ -1,0 +1,70 @@
+{
+  "__version__": "1.2.8",
+  "log": {
+    "level": 4
+  },
+  "common": {
+    "outputName": "wechatgame",
+    "mainBundleCompressionType": "subpackage",
+    "platform": "wechatgame",
+    "mainBundleIsRemote": false,
+    "name": "yinlvqianshen",
+    "startScene": "885e99a6-4800-4302-b8e1-e8c9a0ce3bee",
+    "debug": false,
+    "replaceSplashScreen": false
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1692860128706": {
+        "id": "1692860128706",
+        "progress": 1,
+        "state": "success",
+        "message": "2023-9-14 17:05 Build success in 28239 ms!",
+        "options": {
+          "name": "yinlvqianshen",
+          "platform": "wechatgame",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "subpackage",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "885e99a6-4800-4302-b8e1-e8c9a0ce3bee",
+          "scenes": [
+            {
+              "url": "db://assets/scene/game.scene",
+              "uuid": "7c3e7fab-7b1e-4865-ba84-3cf81b48b9fb",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene/load.scene",
+              "uuid": "885e99a6-4800-4302-b8e1-e8c9a0ce3bee",
+              "inBundle": false
+            }
+          ],
+          "outputName": "wechatgame",
+          "packages": {
+            "cocos-service": {
+              "configID": "191d66",
+              "services": []
+            },
+            "wechatgame": {
+              "startSceneAssetBundle": true,
+              "orientation": "portrait",
+              "appid": "wx25ef06964a8a27a8",
+              "separateEngine": true,
+              "wasm": "js"
+            }
+          }
+        },
+        "time": "2023-9-14 17:05",
+        "dirty": false
+      }
+    }
+  }
+}

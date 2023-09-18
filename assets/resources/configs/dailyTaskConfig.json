@@ -1,0 +1,47 @@
+﻿[
+    {
+        "id": 0,
+        "title": "大训练家",
+        "des": "挑战一次无限模式",
+        "ironPath": "00",
+        "target": 1,
+        "vitalityAward": 20,
+        "diaAward": 20
+    },
+    {
+        "id": 1,
+        "title": "影视新秀",
+        "des": "复活一次",
+        "ironPath": "01",
+        "target": 1,
+        "vitalityAward": 20,
+        "diaAward": 20
+    },
+    {
+        "id":2,
+        "title": "战术大师",
+        "des": "过关任意歌曲一次",
+        "ironPath": "02",
+        "target": 1,
+        "vitalityAward": 20,
+        "diaAward": 20
+    },
+    {
+        "id":3,
+        "title": "时间管理大师",
+        "des": "累计在线时长3分钟",
+        "ironPath": "03",
+        "target": 180,
+        "vitalityAward": 20,
+        "diaAward": 20
+    },
+    {
+        "id":4,
+        "title": "电竞选手",
+        "des": "单局一千分以上",
+        "ironPath": "04",
+        "target": 1000,
+        "vitalityAward": 20,
+        "diaAward": 20
+    }
+]

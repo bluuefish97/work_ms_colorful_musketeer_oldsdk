@@ -1,0 +1,73 @@
+{
+    "name": "页面配置文件",
+    "panel_list": [
+        {
+            "name": "歌曲主页面",
+            "type": "Home",
+            "path": "HomePanel",
+            "isRemote": false
+        },
+        {
+            "name": "商店",
+            "type": "ShopPanel",
+            "path": "ShopPanel",
+            "isRemote": false
+        },
+        {
+            "name": "钻石获取页面",
+            "type": "DiaSupplement",
+            "path": "DiaSupplementPanel",
+            "isRemote": false
+        },
+        {
+            "name": "体力获取页面",
+            "type": "PowerSupplement",
+            "path": "PowerSupplementPanel",
+            "isRemote": false
+        },
+        {
+            "name": "二级加载页面",
+            "type": "SubLoad",
+            "path": "LoadPanel",
+            "isRemote": false
+        },
+        {
+            "name": "专属推荐页面",
+            "type": "Recommend",
+            "path": "RecommendPanel",
+            "isRemote": false
+        },
+        {
+            "name": "皮肤页面",
+            "type": "Skin",
+            "path": "SkinPanel",
+            "isRemote": false
+        },
+        {
+            "name": "结算页面",
+            "type": "Settle_Normal",
+            "path": "SettlePanel",
+            "isRemote": false
+        },
+        {
+            "name": "复活页面",
+            "type": "Revive",
+            "path": "RevivePanel",
+            "isRemote": false
+        },
+        {
+            "name": "设置页面",
+            "type": "Set",
+            "path": "SetPanel",
+            "isRemote": false
+            
+        },
+        {
+            "name": "分享弹窗",
+            "type": "ShareRec",
+            "path": "ShareRecPanel",
+            "isRemote": false
+            
+        }
+    ]
+}

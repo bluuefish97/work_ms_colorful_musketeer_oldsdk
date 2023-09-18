@@ -1,0 +1,71 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5354a38c-59b9-41df-a748-93b57de3c40a",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "BS_Grid_001": {
+      "ver": "1.0.4",
+      "uuid": "fdf8fb12-61fc-47fd-8e02-ab06ab70cf18",
+      "rawTextureUuid": "5354a38c-59b9-41df-a748-93b57de3c40a",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 512,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5354a38c-59b9-41df-a748-93b57de3c40a@6c48a",
+      "displayName": "BS_Grid_001",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5354a38c-59b9-41df-a748-93b57de3c40a"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "compressSettings": {
+      "useCompressTexture": false
+    },
+    "redirect": "5354a38c-59b9-41df-a748-93b57de3c40a@6c48a"
+  }
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "offsetTimeDur": 1,
+        "offsetFator": 1.5,
+        "minOffsetTimeDur": 0.3,
+        "maxContinuousTimes": 5,
+        "bombAriseDurNumber": 8,
+        "bombOffset": 1.4,
+        "movePointRat": 0,
+        "bombRat": 0.2,
+        "movePointMax": 5
+    },
+    {
+        "offsetTimeDur": 1,
+        "offsetFator": 1.5,
+        "minOffsetTimeDur": 0.2,
+        "maxContinuousTimes": 3,
+        "bombAriseDurNumber": 5,
+        "bombOffset": 1.3,
+        "movePointRat": 0.25,
+        "bombRat": 0.35,
+        "movePointMax": 8
+    },
+    {
+        "offsetTimeDur": 1,
+        "offsetFator": 1.5,
+        "minOffsetTimeDur": 0.05,
+        "maxContinuousTimes": 1,
+        "bombAriseDurNumber": 3,
+        "bombOffset": 1.2,
+        "movePointRat": 0.5,
+        "bombRat": 0.5,
+        "movePointMax": 12
+    }
+]

@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ani_选中歌曲00
+  rotate: false
+  xy: 245, 28
+  size: 215, 215
+  orig: 215, 215
+  offset: 0, 0
+  index: -1
+ani_选中歌曲01
+  rotate: false
+  xy: 2, 2
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+ani_选中歌曲02
+  rotate: false
+  xy: 462, 57
+  size: 185, 186
+  orig: 185, 186
+  offset: 0, 0
+  index: -1

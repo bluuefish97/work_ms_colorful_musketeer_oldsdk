@@ -1,0 +1,27 @@
+{
+  "__version__": "1.0.1",
+  "script": {
+    "useDefineForClassFields": false,
+    "allowDeclareFields": false
+  },
+  "layer": [
+    {
+      "name": "EnvRoad",
+      "value": 1
+    },
+    {
+      "name": "EnvBg",
+      "value": 2
+    },
+    {
+      "name": "gameUI",
+      "value": 4
+    }
+  ],
+  "general": {
+    "designResolution": {
+      "width": 1080,
+      "height": 1920
+    }
+  }
+}

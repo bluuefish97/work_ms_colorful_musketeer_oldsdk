@@ -1,0 +1,74 @@
+﻿[
+    {
+        "id": 0,
+        "skinName": "节奏子弹",
+        "ironPath": "zidan",
+        "modelPath": "BS_Weapon_Bullet",
+        "des": "巴拉巴拉",
+        "unlockType": "dia",
+        "unlockVal": 0
+    },
+    {
+        "id": 1,
+        "skinName": "精准导弹",
+        "ironPath": "daodan",
+        "modelPath": "BS_Weapon_daodan",
+        "des": "巴拉巴拉1",
+        "unlockType": "dia",
+        "unlockVal": 200
+    },
+    {
+        "id": 2,
+        "skinName": "超级棒棒糖",
+        "ironPath": "bbt",
+        "modelPath": "BS_Weapon_bbt",
+        "des": "巴拉巴拉2",
+        "unlockType": "ad",
+        "unlockVal": 0
+    },
+    {
+        "id": 3,
+        "skinName": "小李飞镖",
+        "ironPath": "feibiao1",
+        "modelPath": "BS_Weapon_feibiao1",
+        "des": "巴拉巴拉2",
+        "unlockType": "ad",
+        "unlockVal": 0
+    },
+    {
+        "id": 4,
+        "skinName": "魅蓝十字星",
+        "ironPath": "feibiao2",
+        "modelPath": "BS_Weapon_feibiao2",
+        "des": "巴拉巴拉3",
+        "unlockType": "ad",
+        "unlockVal": 0
+    },
+    {
+        "id": 5,
+        "skinName": "橙色回旋",
+        "ironPath": "feibiao3",
+        "modelPath": "BS_Weapon_feibiao3",
+        "des": "巴拉巴拉4",
+        "unlockType": "ad",
+        "unlockVal": 0
+    },
+    {
+        "id": 6,
+        "skinName": "斧头",
+        "ironPath": "hutou",
+        "modelPath": "BS_Weapon_hutou",
+        "des": "巴拉巴拉5",
+        "unlockType": "dia",
+        "unlockVal": 500
+    },
+    {
+        "id": 7,
+        "skinName": "雷神锤",
+        "ironPath": "lsc",
+        "modelPath": "BS_Weapon_lsc",
+        "des": "巴拉巴拉6",
+        "unlockType": "dia",
+        "unlockVal": 500
+    }
+]

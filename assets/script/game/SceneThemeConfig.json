@@ -1,0 +1,78 @@
+{
+    "SceneThemeConfig": {
+        "Themes": [
+            {
+                "ID": 0,
+                "name": "山岭系列_001",
+                "resName": "Env-001",
+                "skinBundleName": "bs_scene_mountain_001",
+                "skins": [
+                    {
+                        "BGPath": "BG_T1",
+                        "MapPath": "BS_SN_Map_T1",
+                        "MediumShot_Path": "MediumShot_T1"
+                    },
+                    {
+                        "BGPath": "BG_T2",
+                        "MapPath": "BS_SN_Map_T2",
+                        "MediumShot_Path": "MediumShot_T2"
+                    },
+                    {
+                        "BGPath": "BG_T3",
+                        "MapPath": "BS_SN_Map_T3",
+                        "MediumShot_Path": "MediumShot_T3"
+                    }
+                ]
+            },
+            {
+                "ID": 1,
+                "name": "山岭系列_002",
+                "resName": "Env-002",
+                "skinBundleName": "bs_scene_mountain_002",
+                "skins": [
+                    {
+                        "BGPath": "BG_T1",
+                        "DiMianPath":"BS_DiMian_T1",
+                        "MapPath": "BS_SN_Map_T1",
+                        "MediumShot_Path": "MediumShot_T1"
+                    },
+                    {
+                        "BGPath": "BG_T2",
+                        "DiMianPath":"BS_DiMian_T2",
+                        "MapPath": "BS_SN_Map_T2",
+                        "MediumShot_Path": "MediumShot_T2"
+                    },
+                    {
+                        "BGPath": "BG_T3",
+                        "DiMianPath":"BS_DiMian_T3",
+                        "MapPath": "BS_SN_Map_T3",
+                        "MediumShot_Path": "MediumShot_T3"
+                    }
+                ]
+            },
+            {
+                "ID": 2,
+                "name": "山岭系列_003",
+                "resName": "Env-003",
+                "skinBundleName": "bs_scene_mountain_003",
+                "skins": [
+                    {
+                        "BGPath": "BG_T1",
+                        "MapPath": "BS_SN_Map_T1",
+                        "MediumShot_Path": "MediumShot_T3"
+                    },
+                    {
+                        "BGPath": "BG_T2",
+                        "MapPath": "BS_SN_Map_T2",
+                        "MediumShot_Path": "MediumShot_T2"
+                    },
+                    {
+                        "BGPath": "BG_T3",
+                        "MapPath": "BS_SN_Map_T3",
+                        "MediumShot_Path": "MediumShot_T3"
+                    }
+                ]
+            }
+        ]
+    }
+}

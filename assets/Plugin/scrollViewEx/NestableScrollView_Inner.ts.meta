@@ -1,0 +1,14 @@
+{
+  "ver": "4.0.22",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "63a14c20-2ce3-4ffe-8569-6db5e53a6c15",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/TS/plugin/ScrollView/NestableScrollView_Inner.js",
+    "importerSettings": 0,
+    "simulateGlobals": []
+  }
+}
